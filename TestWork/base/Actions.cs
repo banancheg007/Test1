@@ -24,11 +24,17 @@ namespace FirstTestProject.page
             return driver.FindElement(locator);
         }
 
-        /*void WaitForDisplayed(By locator)
+        public void WaitForDisplayed(By locator)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(GetWebElement(locator).Displayed);
-        }*/
+            wait.Until(driver => GetWebElement(locator).Displayed == true);
+        }
+
+        public void WaitForEnabled(By locator)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(driver => GetWebElement(locator).Enabled == true);
+        }
     }
 
 }

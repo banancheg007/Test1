@@ -11,12 +11,12 @@ namespace FirstTestProject.main
 {
     class SearchPage: Actions
     {
-        public By FirstLink = By.CssSelector("li:nth-child(1) > .editors-choice > div a");
+        public By firstLink = By.CssSelector("li:nth-child(1) > .editors-choice > div a");
 
         public void ClickOnFirstLink()
         {
-            GetWebElement(FirstLink).Click();
-            
+            WaitForDisplayed(firstLink);
+            GetWebElement(firstLink).Click();
         }
     }
 }

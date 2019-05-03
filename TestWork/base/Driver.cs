@@ -16,9 +16,13 @@ namespace FirstTestProject.main
 
         public static IWebDriver Instance()
         {
+            InternetExplorerOptions options = new InternetExplorerOptions();
             if (driver == null)
+            {
+                options.EnableNativeEvents = false;
+                driver = new InternetExplorerDriver(options);
+            }
 
-            driver = new InternetExplorerDriver();
             return driver;
         }
 

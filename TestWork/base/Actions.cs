@@ -27,7 +27,7 @@ namespace FirstTestProject.page
         public void WaitForDisplayed(By locator)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(driver => GetWebElement(locator).Displayed == true);
+            wait.Until((driver) => GetWebElement(locator).Displayed == true);
         }
 
         public void WaitForEnabled(By locator)

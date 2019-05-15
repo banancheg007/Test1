@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="base\Actions.cs" />
+    <Compile Include="tests\AssertionsTests.cs" />
     <Compile Include="util\Constants.cs" />
     <Compile Include="base\Driver.cs" />
     <Compile Include="page\MainPage.cs" />
